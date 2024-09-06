@@ -1,0 +1,28 @@
+{
+  "name": "op-super-delegate-clone",
+  "description": "Make a clone of the Optimism Super Delegate Attestation",
+  "keywords": ["gitcoin", "passport"],
+  "queries": [
+    {
+      "url": "https://optimism.easscan.org/graphql",
+      "body": {
+        "query": "query PassportQuery($where: AttestationWhereInput, $take: Int) { attestations(where: $where, take: $take) { decodedDataJson } }",
+        "variables": {
+          "where": {
+            "schemaId": {
+              "equals": "0xe4a196f8ea37d5f9699b095594e44b465b2703eff0615cf9766060786eef517b"
+            },
+            "recipient": {
+              "equals": "{user_eth_address}",
+              "mode": "insensitive"
+            }
+          },
+          "take": 1
+        }
+      }
+    }
+  ],
+  "schema": "string snapshotDate",
+  "resolver": "0x0000000000000000000000000000000000000000",
+  "revokable": false
+}
