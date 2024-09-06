@@ -1,5 +1,7 @@
 # Devouch Active User
 
+## Min 10 vouches
+
 You can claim this attestation if you are an active user on Devouch with a minimum of 10 vouches.
 
 ## About Devouch
