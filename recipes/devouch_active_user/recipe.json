@@ -1,6 +1,6 @@
 {
   "name": "devouch-active-user",
-  "description": "Make a clone of the Optimism Super Delegate Attestation",
+  "description": "User has vouched for at least 10 projects on Devouch.xyz",
   "keywords": ["devouch", "optimism"],
   "queries": [
     {
