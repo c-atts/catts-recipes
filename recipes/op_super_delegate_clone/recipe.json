@@ -1,7 +1,7 @@
 {
   "name": "op-super-delegate-clone",
   "description": "Make a clone of the Optimism Super Delegate Attestation",
-  "keywords": ["gitcoin", "passport"],
+  "keywords": ["optimism", "governance"],
   "queries": [
     {
       "url": "https://optimism.easscan.org/graphql",
