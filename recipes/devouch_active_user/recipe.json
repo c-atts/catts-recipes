@@ -1,0 +1,28 @@
+{
+  "name": "devouch-active-user",
+  "description": "Make a clone of the Optimism Super Delegate Attestation",
+  "keywords": ["devouch", "optimism"],
+  "queries": [
+    {
+      "url": "https://optimism.easscan.org/graphql",
+      "body": {
+        "query": "query Query($where: AttestationWhereInput) { aggregateAttestation(where: $where) { _count { id } } }",
+        "variables": {
+          "where": {
+            "schemaId": {
+              "equals": "0x97b0c9911936fad57e77857fac6eef6771f8d0bf025be9549214e32bf9e2415a"
+            },
+            "attester": {
+              "equals": "{user_eth_address}",
+              "mode": "insensitive"
+            }
+          },
+          "take": 1
+        }
+      }
+    }
+  ],
+  "schema": "bool activeUser",
+  "resolver": "0x0000000000000000000000000000000000000000",
+  "revokable": false
+}
