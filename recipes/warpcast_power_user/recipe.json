@@ -1,0 +1,15 @@
+{
+  "name": "warpcast-power-user",
+  "description": "Attest to being a Warpcast Power User.",
+  "keywords": [
+    "warpcast"
+  ],
+  "queries": [
+    {
+      "url": "https://api.dune.com/api/v1/query/4138292/results?limit=1&filters=custody_address%3D{user_eth_address_lowercase}"
+    }
+  ],
+  "schema": "bool isWarpcastPowerUser",
+  "resolver": "0x0000000000000000000000000000000000000000",
+  "revokable": false
+}
